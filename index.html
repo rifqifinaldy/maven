@@ -16,7 +16,7 @@
         <input
           type="number"
           id="bilangan"
-          placeholder="Masukan Angka dari 1-9"
+          placeholder="Angka tidak boleh mengandung 0"
         />
         <button onclick="getBilangan()">Generate</button>
 
@@ -25,10 +25,8 @@
       <div class="section-container">
         <h2>Soal 2</h2>
         <input type="number" id="grafik" placeholder="Masukan Jumlah Chart" />
-        <button onclick="getGrafik()">Start</button>
-        <div>
-          <canvas id="myChart"></canvas>
-        </div>
+        <input type="button" id="grafik-button" value="start">
+        <div id="chart-wrapper"></div>
       </div>
     </div>
 
