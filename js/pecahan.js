@@ -12,7 +12,7 @@ const getBilangan = () => {
   let bilangan = document.getElementById("bilangan").value;
   //   Check Apabila ada angka 0 pada Input
   if (bilangan.indexOf("0") > -1) {
-    alert("Ada Angka 0");
+    alert("Mohon untuk tidak menyisipkan angka 0");
   } else {
     //   Eksekusi function pecahBilangan
     pecahBilangan(bilangan);

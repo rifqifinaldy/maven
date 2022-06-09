@@ -4,25 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Maven Test</title>
   </head>
   <body>
-    <h1>Maven Coding Test</h1>
+    <h1 class="app-title">Maven Coding Test</h1>
     <!-- Soal 1 Memecah Bilangan -->
-    <h2>Soal 1</h2>
-    <input type="number" id="bilangan" />
-    <button onclick="getBilangan()">Generate</button>
+    <div class="app-container">
+      <div class="section-container">
+        <h2>Soal 1</h2>
+        <input
+          type="number"
+          id="bilangan"
+          placeholder="Masukan Angka dari 1-9"
+        />
+        <button onclick="getBilangan()">Generate</button>
 
-    <div id="list-pecahan-wrapper"></div>
-
-    <!-- Import JQuery CDN -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+        <div id="list-pecahan-wrapper"></div>
+      </div>
+      <div class="section-container">
+        <h2>Soal 2</h2>
+        <input type="number" id="bilangan" placeholder="Masukan Jumlah Chart" />
+        <button onclick="getBilangan()">Start</button>
+        <div>
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
 
     <!-- Impoprt Custom Script -->
-    <script src="./js/script.js"></script>
+    <script src="./js/pecahan.js"></script>
+
+    <!-- Import Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const labels = ["January", "February", "March", "April", "May", "June"];
+
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "My First dataset",
+            backgroundColor: "rgb(255, 99, 132)",
+            borderColor: "rgb(255, 99, 132)",
+            data: [0, 10, 5, 2, 20, 30, 45],
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: data,
+        options: {},
+      };
+    </script>
+
+    <script>
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
   </body>
 </html>

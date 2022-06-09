@@ -1,0 +1,23 @@
+/* Import Font Styling */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Orbitron:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    padding: 0.2em;
+    font-size: 12px;
+    width: 80%;
+}
+
+
+.app-title {
+    text-align: center;
+    font-weight: 600;
+    color: #131313;
+}
+
+.section-container {
+    min-height: 360px;
+}
