@@ -24,44 +24,22 @@
       </div>
       <div class="section-container">
         <h2>Soal 2</h2>
-        <input type="number" id="bilangan" placeholder="Masukan Jumlah Chart" />
-        <button onclick="getBilangan()">Start</button>
+        <input type="number" id="grafik" placeholder="Masukan Jumlah Chart" />
+        <button onclick="getGrafik()">Start</button>
         <div>
           <canvas id="myChart"></canvas>
         </div>
       </div>
     </div>
 
-    <!-- Impoprt Custom Script -->
-    <script src="./js/pecahan.js"></script>
-
     <!-- Import Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script>
-      const labels = ["January", "February", "March", "April", "May", "June"];
+    <!-- Import Custom Script -->
+    <script src="./js/pecahan.js"></script>
+    <script src="./js/grafik.js"></script>
 
-      const data = {
-        labels: labels,
-        datasets: [
-          {
-            label: "My First dataset",
-            backgroundColor: "rgb(255, 99, 132)",
-            borderColor: "rgb(255, 99, 132)",
-            data: [0, 10, 5, 2, 20, 30, 45],
-          },
-        ],
-      };
+    
 
-      const config = {
-        type: "line",
-        data: data,
-        options: {},
-      };
-    </script>
-
-    <script>
-      const myChart = new Chart(document.getElementById("myChart"), config);
-    </script>
   </body>
 </html>

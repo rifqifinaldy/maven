@@ -20,12 +20,11 @@ const getBilangan = () => {
 };
 
 // Function Untuk Memecah Bilangan
-const pecahBilangan = (num, hasil = [], factor = 1) => {
-  if (num) {
-    const val = (num % 10) * factor;
+const pecahBilangan = (bilangan, hasil = [], factor = 1) => {
+  if (bilangan) {
+    const val = (bilangan % 10) * factor;
     hasil.unshift(val);
-
-    return pecahBilangan(Math.floor(num / 10), hasil, factor * 10);
+    return pecahBilangan(Math.floor(bilangan / 10), hasil, factor * 10);
   }
   renderPecahan(hasil);
   return hasil;
